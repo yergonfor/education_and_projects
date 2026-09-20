@@ -1,0 +1,1 @@
+Sin CSS, los div organizan el contenido, pero no permiten colocar los planetas como en una maqueta completa.

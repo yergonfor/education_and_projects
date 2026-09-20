@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de datos personales</title>
+</head>
+<body>
+<h1>Datos personales</h1>
+<form action="recibido.html" method="get">
+    <fieldset>
+        <legend>Información personal</legend>
+        <p><label for="nombre">Nombre</label> <input id="nombre" maxlength="40" name="nombre" placeholder="Tu nombre" required
+                                                     size="25" type="text"></p>
+        <p><label for="apellidos">Apellidos</label> <input id="apellidos" maxlength="60" name="apellidos" placeholder="Tus apellidos"
+                                                           required size="35" type="text"></p>
+        <p><label for="nacimiento">Fecha de nacimiento</label> <input id="nacimiento" name="nacimiento" required
+                                                                      type="date"></p>
+        <p><label for="nif">NIF</label> <input id="nif" maxlength="9" name="nif" pattern="[0-9]{8}[A-Za-z]" placeholder="12345678A"
+                                               required size="10" type="text"></p>
+        <p><label for="telefono">Teléfono</label> <input id="telefono" maxlength="9" name="telefono" pattern="[0-9]{9}"
+                                                         placeholder="600123456" required size="12"
+                                                         type="tel"></p>
+        <p><label for="correo">Correo electrónico</label> <input id="correo" maxlength="80" name="correo" placeholder="nombre@ejemplo.com"
+                                                                 required size="30"
+                                                                 type="email"></p>
+        <p><label for="direccion">Dirección</label> <input id="direccion" maxlength="100" name="direccion" placeholder="Calle y número"
+                                                           size="40" type="text"></p>
+        <p><label for="poblacion">Población</label> <input id="poblacion" maxlength="50" name="poblacion" size="25"
+                                                           type="text"></p>
+        <p><label for="provincia">Provincia</label> <input id="provincia" maxlength="50" name="provincia" size="25"
+                                                           type="text"></p>
+        <fieldset>
+            <legend>Sexo</legend>
+            <label><input name="sexo" type="radio" value="mujer"> Mujer</label> <label><input name="sexo" type="radio"
+                                                                                              value="hombre">
+            Hombre</label> <label><input name="sexo" type="radio" value="otro"> Otro</label></fieldset>
+        <p><label for="estudios">Estudios</label> <select id="estudios" name="estudios">
+            <option value="">Selecciona una opción</option>
+            <option>ESO</option>
+            <option>Bachillerato</option>
+            <option>Grado superior</option>
+            <option>Universidad</option>
+        </select></p>
+        <p><label for="observaciones">Observaciones</label><br><textarea cols="50" id="observaciones"
+                                                                         name="observaciones" placeholder="Escribe tus observaciones"
+                                                                         rows="5"></textarea>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Cuenta de usuario</legend>
+        <p><label for="usuario">Usuario</label> <input id="usuario" maxlength="20" minlength="4" name="usuario" placeholder="Tu usuario"
+                                                       required size="20" type="text"></p>
+        <p><label for="contrasena">Contraseña</label> <input id="contrasena" maxlength="30" minlength="8" name="contrasena"
+                                                             pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}" placeholder="Mínimo 8 caracteres"
+                                                             required
+                                                             size="20" type="password"></p>
+    </fieldset>
+    <button type="reset">Borrar datos</button>
+    <button type="submit">Enviar datos</button>
+</form>
+</body>
+</html>
